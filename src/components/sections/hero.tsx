@@ -34,12 +34,12 @@ export function HeroSection() {
             {hero.eyebrow}
           </Badge>
           <h1
-            id="hero-heading"
-            className="text-4xl font-heading font-bold leading-tight tracking-tight text-brand-navy sm:text-5xl lg:text-h1"
-          >
+  id="hero-heading"
+  className="max-w-xl text-5xl font-heading font-extrabold leading-[1.02] tracking-[-0.03em] text-brand-navy sm:text-6xl lg:text-7xl"
+>
             {hero.headline}
           </h1>
-          <div className="mt-5 space-y-4 text-body text-brand-charcoal/80 sm:text-body-lg">
+          <div className="mt-8 max-w-xl space-y-6 text-[18px] leading-9 text-brand-charcoal/75">
             {hero.body.split("\n\n").map((para, i) => (
               <p key={i}>{para}</p>
             ))}
