@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-surface-white text-brand-charcoal font-body text-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-brand-navy;
+  }
+
+  /* Visible, on-brand focus ring for every interactive element —
+     never rely on the browser default, never remove it outright. */
+  :focus-visible {
+    outline: 2px solid #0A6EBD;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Respect prefers-reduced-motion globally (Spec 5.11 + WCAG). Framer
+     Motion variants also check this via useReducedMotion(), this is the
+     CSS-level backstop for anything animated outside of Motion. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Selection color tuned to brand instead of default blue */
+  ::selection {
+    background-color: #0A6EBD;
+    color: #FFFFFF;
+  }
+}
+
+/* Radix Accordion smooth open/close — must be in global CSS, not Tailwind JIT */
+@keyframes accordion-down {
+  from { height: 0; }
+  to   { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to   { height: 0; }
+}
+.data-\[state\=open\]\:animate-accordion-down[data-state="open"] {
+  animation: accordion-down 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.data-\[state\=closed\]\:animate-accordion-up[data-state="closed"] {
+  animation: accordion-up 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-section-y-sm md:py-section-y;
+  }
+
+  .container-content {
+    @apply mx-auto max-w-content px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Premium refinement pass — decorative layers used sparingly to add
+     richness to otherwise-flat section backgrounds. Always aria-hidden,
+     always pointer-events-none, always behind content (z-0 or negative). */
+
+  /* Soft dot-grid pattern, very low opacity */
+  .bg-dot-grid {
+    background-image: radial-gradient(rgba(10, 110, 189, 0.14) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Diagonal wash used on hero / CTA sections for a premium gradient feel */
+  .bg-radial-blue-wash {
+    background-image: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(10, 110, 189, 0.08), transparent 70%);
+  }
+
+  .bg-radial-gold-wash {
+    background-image: radial-gradient(ellipse 60% 50% at 100% 0%, rgba(245, 166, 35, 0.08), transparent 70%);
+  }
+}

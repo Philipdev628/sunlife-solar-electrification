@@ -1,0 +1,12 @@
+{
+  "name": "SunLife Solar Electrification",
+  "short_name": "SunLife Solar",
+  "description": "Reliable solar and electrical solutions across Nigeria.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0A6EBD",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon" }
+  ]
+}
