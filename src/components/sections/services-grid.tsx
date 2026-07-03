@@ -24,8 +24,9 @@ export function ServicesSection() {
         </Reveal>
 
         <StaggerGroup className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.06}>
-          {services.map((service) => {
+          {services.map((service, i) => {
             const Icon = service.icon;
+            const isGold = i % 3 === 1;
             return (
               <StaggerItem key={service.slug}>
                 <Link
@@ -33,9 +34,11 @@ export function ServicesSection() {
                   className="group flex h-full flex-col rounded-card border border-border bg-white p-6 shadow-card transition-all duration-default ease-brand hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
                   aria-label={`Learn more about ${service.title}`}
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-blue-light transition-colors duration-fast group-hover:bg-brand-blue">
+                  <div
+                    className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-colors duration-fast group-hover:bg-brand-blue ${isGold ? "bg-brand-gold/15" : "bg-brand-blue-light"}`}
+                  >
                     <Icon
-                      className="h-6 w-6 text-brand-blue transition-colors duration-fast group-hover:text-white"
+                      className={`h-6 w-6 transition-colors duration-fast group-hover:text-white ${isGold ? "text-brand-gold-dark" : "text-brand-blue"}`}
                       aria-hidden="true"
                     />
                   </div>

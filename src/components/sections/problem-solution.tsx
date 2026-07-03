@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -5,28 +6,25 @@ import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/common/container";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/common/motion";
 import { problemSolution } from "@/content/homepage";
+import { stockImages } from "@/content/stock-images";
 
 export function ProblemSolutionSection() {
   const { sectionLabel, heading, intro, challenges, solution, imageAlt } = problemSolution;
 
   return (
-    <section className="bg-white section-padding" aria-labelledby="problem-heading">
+    <section className="bg-white pb-section-y-sm pt-32 sm:pt-36 md:pb-section-y lg:pt-40" aria-labelledby="problem-heading">
       <Container>
         <div className="grid items-start gap-14 lg:grid-cols-[45fr_55fr]">
           {/* ── Left: Image ── */}
           <Reveal className="lg:sticky lg:top-28">
-            <div
-              className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-brand-navy via-brand-blue/70 to-brand-navy/90 shadow-card"
-              role="img"
-              aria-label={imageAlt}
-            >
-              <div className="flex h-full items-center justify-center">
-                <p className="px-8 text-center text-sm font-medium text-white/50">
-                  Replace with an authentic SunLife installation photo
-                  <br />
-                  <span className="text-white/30">( /public/images/about/installation.jpg )</span>
-                </p>
-              </div>
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-card ring-1 ring-black/5">
+              <Image
+                src={stockImages.homeSolarAlt.src}
+                alt={imageAlt || stockImages.homeSolarAlt.alt}
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </Reveal>
 

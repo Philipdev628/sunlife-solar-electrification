@@ -115,10 +115,15 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "ken-burns": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.06)" },
+        },
       },
       animation: {
         "fade-in": "fade-in 350ms ease-out forwards",
         "slide-up": "slide-up 350ms cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "ken-burns": "ken-burns 20s ease-out forwards",
       },
     },
   },
