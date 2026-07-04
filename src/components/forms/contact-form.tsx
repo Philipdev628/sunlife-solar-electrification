@@ -63,7 +63,7 @@ export function ContactForm() {
   console.log("Submitting form...", values);  
     setSubmitError(null);
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/contact", {
         method: "POST",
         headers: { 
           "Content-Type": "application/x-www-form-urlencoded" },
@@ -81,7 +81,7 @@ export function ContactForm() {
       });
       console.log("Response status:", response.status);
       console.log("Response OK:", response.ok);
-      
+
       if (!response.ok) throw new Error("Submission failed");
       router.push("/thank-you");
     } catch {
