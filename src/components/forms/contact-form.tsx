@@ -90,6 +90,7 @@ export function ContactForm() {
   return (
     <form
       name="contact"
+      method="POST"
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-5"
       // Netlify Forms detection — the static HTML build must contain a
