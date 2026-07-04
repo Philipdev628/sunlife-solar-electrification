@@ -60,11 +60,13 @@ export function ContactForm() {
   const serviceNeededValue = watch("serviceNeeded");
 
   async function onSubmit(values: ContactFormValues) {
+  console.log("Submitting form...", values);  
     setSubmitError(null);
     try {
       const response = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded" },
         body: encodeFormData({
           "form-name": "contact",
           fullName: values.fullName,
@@ -77,7 +79,9 @@ export function ContactForm() {
           company: values.company ?? "",
         }),
       });
-
+      console.log("Response status:", response.status);
+      console.log("Response OK:", response.ok);
+      
       if (!response.ok) throw new Error("Submission failed");
       router.push("/thank-you");
     } catch {
