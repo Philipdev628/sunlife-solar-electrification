@@ -117,7 +117,7 @@ const config: Config = {
         },
         "ken-burns": {
           "0%": { transform: "scale(1)" },
-          "100%": { transform: "scale(1.06)" },
+          "100%": { transform: "scale(1.035)" },
         },
       },
       animation: {

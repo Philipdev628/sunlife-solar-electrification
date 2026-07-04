@@ -64,6 +64,48 @@ export const stockImages = {
     alt: "Security camera mounted on the ceiling of a building",
     credit: "Franck V. / Unsplash",
   },
+
+  // ─── Real SunLife project photography ──────────────────────────────────
+  // Curated from the official media library — only the strongest, most
+  // premium-appropriate shots were selected; near-duplicates and lower-
+  // quality frames were left out. Stored locally at /public/images/real/.
+
+  // About hero — technician actively installing a panel, real human element.
+  realAboutHero: {
+    src: "/images/real/about-hero.jpg",
+    alt: "SunLife technician installing a solar panel on a residential rooftop",
+    credit: "SunLife Solar Electrification",
+  },
+  // About "Our Story" — wide rooftop array, a completed SunLife installation.
+  realAboutStory: {
+    src: "/images/real/about-story.jpg",
+    alt: "A completed SunLife Solar Electrification rooftop solar installation",
+    credit: "SunLife Solar Electrification",
+  },
+  // Projects page hero — full rooftop array on a real client property.
+  realProjectsHero: {
+    src: "/images/real/projects-hero.jpg",
+    alt: "A completed SunLife Solar Electrification solar panel installation",
+    credit: "SunLife Solar Electrification",
+  },
+  // Residential project card / gallery — real residential rooftop install.
+  realProjectResidential: {
+    src: "/images/real/project-residential.jpg",
+    alt: "SunLife technician on a rooftop during a residential solar installation",
+    credit: "SunLife Solar Electrification",
+  },
+  // System-upgrade project card / gallery — real installation in progress.
+  realProjectUpgrade: {
+    src: "/images/real/project-upgrade.jpg",
+    alt: "A SunLife technician working on a rooftop solar panel upgrade",
+    credit: "SunLife Solar Electrification",
+  },
+  // Services overview hero — close, detailed view of real panel hardware.
+  realServicesHero: {
+    src: "/images/real/services-hero.jpg",
+    alt: "Close-up view of solar panels installed by SunLife Solar Electrification",
+    credit: "SunLife Solar Electrification",
+  },
 } satisfies Record<string, StockImage>;
 
 export type StockImageKey = keyof typeof stockImages;
@@ -84,11 +126,13 @@ export const serviceImageMap: Record<string, StockImageKey> = {
   "custom-solar-solutions": "heroRooftop",
 };
 
-/** Maps each project card to a stock image (Projects page + Gallery). */
+/** Maps each project card to an image (Projects page + Gallery). Real SunLife
+ * photos are used where a genuine match exists; everything else keeps its
+ * curated stock photo rather than forcing an unrelated real asset in. */
 export const projectImageMap: Record<string, StockImageKey> = {
-  p1: "residentialHome",
+  p1: "realProjectResidential",
   p2: "commercialBuilding",
-  p3: "homeSolarArray",
+  p3: "realProjectUpgrade",
   p4: "homeSolarAlt",
   p5: "commercialBuilding",
   p6: "cctvCamera",

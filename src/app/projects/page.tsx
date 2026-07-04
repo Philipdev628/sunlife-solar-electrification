@@ -72,8 +72,8 @@ export default function ProjectsPage() {
           <Reveal type="fade" delay={0.12}>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-floating ring-1 ring-black/5 lg:aspect-[5/4]">
               <Image
-                src={stockImages.homeSolarArray.src}
-                alt={projectsHero.imageAlt || stockImages.homeSolarArray.alt}
+                src={stockImages.realProjectsHero.src}
+                alt={projectsHero.imageAlt || stockImages.realProjectsHero.alt}
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"

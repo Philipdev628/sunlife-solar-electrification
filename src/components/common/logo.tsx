@@ -1,39 +1,47 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Sun } from "lucide-react";
 import { siteConfig } from "@/content/site-config";
 import { cn } from "@/lib/utils";
 
 /**
- * Placeholder wordmark logo. Spec 6.1 calls for "the official SunLife Solar
- * Electrification logo" on a clean white background, replaceable without
- * affecting layout. To swap in the real logo file:
- *   1. Drop the logo image into /public/images/logo.svg (or .png)
- *   2. Replace the contents of this component with an <Image> tag pointing
- *      to it, keeping the same height (h-9 / h-7) so the header layout
- *      doesn't shift.
+ * Official SunLife Solar Electrification logo.
+ * Source: /public/images/brand/sunlife-logo.png — the icon mark plus the
+ * "Sunlife" / "Solar" wordmark is baked into the asset itself, so it's
+ * rendered as a single image rather than recombined with site-rendered text.
  */
-export function Logo({ className, compact = false }: { className?: string; compact?: boolean }) {
+export function Logo({
+  className,
+  compact = false,
+  onDark = false,
+}: {
+  className?: string;
+  compact?: boolean;
+  /** Set on dark backgrounds (e.g. the footer) — adds a light backing chip so the mark's navy elements stay legible. */
+  onDark?: boolean;
+}) {
+  const imageHeight = compact ? 44 : 56;
+  const imageWidth = Math.round(imageHeight * (267 / 208)); // native asset aspect ratio
+
   return (
     <Link
       href="/"
       aria-label={`${siteConfig.name} — Home`}
-      className={cn("flex items-center gap-2 shrink-0", className)}
+      className={cn("flex items-center shrink-0", className)}
     >
-      <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-blue text-white">
-        <Sun className="h-5 w-5" strokeWidth={2.25} aria-hidden="true" />
-      </span>
-      <span className="flex flex-col leading-tight">
-        <span
-          className={cn(
-            "font-heading font-bold text-brand-navy transition-all duration-fast",
-            compact ? "text-base" : "text-lg"
-          )}
-        >
-          SunLife Solar
-        </span>
-        <span className="text-[11px] font-medium uppercase tracking-wide text-brand-blue">
-          Electrification
-        </span>
+      <span
+        className={cn(
+          "flex shrink-0 items-center rounded-lg transition-all duration-fast",
+          onDark && "bg-white/95 px-2 py-1.5 shadow-sm"
+        )}
+      >
+        <Image
+          src="/images/brand/sunlife-logo.png"
+          alt="SunLife Solar Electrification"
+          height={imageHeight}
+          width={imageWidth}
+          style={{ height: imageHeight, width: "auto" }}
+          priority
+        />
       </span>
     </Link>
   );

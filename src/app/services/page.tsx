@@ -68,8 +68,8 @@ export default function ServicesPage() {
           <Reveal type="fade" delay={0.12}>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-floating ring-1 ring-black/5 lg:aspect-[5/4]">
               <Image
-                src={stockImages.technicianInstalling.src}
-                alt={servicesHero.imageAlt || stockImages.technicianInstalling.alt}
+                src={stockImages.realServicesHero.src}
+                alt={servicesHero.imageAlt || stockImages.realServicesHero.alt}
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"

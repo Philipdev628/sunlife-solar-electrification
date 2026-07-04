@@ -75,8 +75,8 @@ export default function AboutPage() {
           <Reveal type="fade" delay={0.12}>
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-floating ring-1 ring-black/5 lg:aspect-[5/4]">
               <Image
-                src={stockImages.technicianInstalling.src}
-                alt={aboutHero.imageAlt || stockImages.technicianInstalling.alt}
+                src={stockImages.realAboutHero.src}
+                alt={aboutHero.imageAlt || stockImages.realAboutHero.alt}
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -105,8 +105,8 @@ export default function AboutPage() {
             <Reveal type="fade" delay={0.12} className="lg:sticky lg:top-28">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-card ring-1 ring-black/5">
                 <Image
-                  src={stockImages.heroRooftop.src}
-                  alt={ourStory.imageAlt || stockImages.heroRooftop.alt}
+                  src={stockImages.realAboutStory.src}
+                  alt={ourStory.imageAlt || stockImages.realAboutStory.alt}
                   fill
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   className="object-cover"

@@ -22,7 +22,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Column 1 — Company */}
           <div>
-            <Logo className="[&_span]:text-white" />
+            <Logo onDark />
             <p className="mt-4 text-small leading-relaxed text-white/65">
               Reliable solar and electrical solutions for homes and businesses
               across Nigeria since {siteConfig.establishedYear}.
