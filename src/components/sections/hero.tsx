@@ -10,13 +10,15 @@ import { stockImages } from "@/content/stock-images";
 export function HeroSection() {
   return (
     <section
-      className="relative isolate flex min-h-[620px] items-center overflow-hidden bg-brand-navy pb-40 pt-40 sm:min-h-[680px] sm:pb-44 sm:pt-44 lg:min-h-[760px] lg:pb-48 lg:pt-48"
+      className="relative isolate flex min-h-[620px] items-center bg-brand-navy pb-40 pt-40 sm:min-h-[680px] sm:pb-44 sm:pt-44 lg:min-h-[760px] lg:pb-48 lg:pt-48"
       aria-labelledby="hero-heading"
     >
-      {/* ── Full-bleed background photo — a real moment (technician at work
-          against open sky), not a texture. A shorter, wider container than
-          before keeps the crop natural rather than cutting into a tight slice. ── */}
-      <div className="absolute inset-0 -z-20">
+      {/* ── Background layer — everything here is clipped to the hero's own
+          box (photo, Ken Burns zoom, gradients, glow). Deliberately scoped to
+          its own wrapper rather than the whole <section>, so the stats bar
+          below (a sibling, outside this wrapper) is free to float past the
+          section's bottom edge without being cut off. ── */}
+      <div className="absolute inset-0 -z-20 overflow-hidden">
         <Image
           src={stockImages.technicianInstalling.src}
           alt={hero.imageAlt || stockImages.technicianInstalling.alt}
@@ -25,23 +27,23 @@ export function HeroSection() {
           sizes="100vw"
           className="object-cover object-[center_35%] motion-safe:animate-ken-burns"
         />
-      </div>
 
-      {/* ── Overlay — concentrated behind the text column only, fading out
-          well before the frame's midpoint so most of the photo stays clearly
-          visible rather than being washed out edge-to-edge. ── */}
-      <div
-        className="absolute inset-0 -z-10 bg-[linear-gradient(100deg,rgba(11,23,42,0.92)_0%,rgba(11,23,42,0.72)_32%,rgba(11,23,42,0.32)_58%,rgba(11,23,42,0.05)_78%)]"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-x-0 bottom-0 -z-10 h-56 bg-gradient-to-t from-brand-navy via-brand-navy/65 to-transparent"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -right-20 -top-20 -z-10 h-[420px] w-[420px] rounded-full bg-brand-gold/15 blur-[110px]"
-        aria-hidden="true"
-      />
+        {/* Overlay — concentrated behind the text column only, fading out
+            well before the frame's midpoint so most of the photo stays
+            clearly visible rather than being washed out edge-to-edge. */}
+        <div
+          className="absolute inset-0 bg-[linear-gradient(100deg,rgba(11,23,42,0.92)_0%,rgba(11,23,42,0.72)_32%,rgba(11,23,42,0.32)_58%,rgba(11,23,42,0.05)_78%)]"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-brand-navy via-brand-navy/65 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -right-20 -top-20 h-[420px] w-[420px] rounded-full bg-brand-gold/15 blur-[110px]"
+          aria-hidden="true"
+        />
+      </div>
 
       <Container className="relative z-10">
         <div className="max-w-xl">
@@ -102,7 +104,7 @@ export function HeroSection() {
               same composition instead of an overlay pasted on top. */}
           <Reveal
             delay={0.14}
-            className="mt-8 lg:absolute lg:left-[calc(100%+5rem)] lg:top-1/2 lg:mt-0 lg:w-72 lg:-translate-y-1/2 xl:w-80"
+            className="mt-8 lg:absolute lg:left-[calc(100%+1rem)] lg:top-1/2 lg:mt-0 lg:w-72 lg:-translate-y-1/2 xl:w-80"
           >
             <div className="w-full max-w-sm rounded-2xl border border-white/15 bg-white/8 p-6 shadow-floating backdrop-blur-xl">
               <p className="text-small font-bold uppercase tracking-wide text-white/60">
@@ -122,8 +124,10 @@ export function HeroSection() {
       </Container>
 
       {/* ── Stats bar — anchored to the hero's bottom edge, straddling into
-          the next section for that premium "floating metrics" feel. ── */}
-      <div className="absolute inset-x-0 bottom-0 z-20 translate-y-[20%] px-4">
+          the next section for that premium "floating metrics" feel. No
+          overflow-hidden between here and the section root, so it's never
+          clipped, on any breakpoint. ── */}
+      <div className="absolute inset-x-0 bottom-0 z-10 translate-y-0 px-4 sm:translate-y-1/2">
         <Container className="!px-0">
           <StaggerGroup className="mx-auto grid max-w-5xl grid-cols-1 divide-y divide-border rounded-2xl border border-white/60 bg-white shadow-[0_30px_70px_rgba(15,23,42,0.18)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {hero.stats.map((stat, i) => (
