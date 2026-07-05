@@ -43,7 +43,7 @@ export const hero = {
   stats: [
     { value: "2020", label: "Established", sublabel: "Providing reliable solar solutions" },
     { value: "Nationwide", label: "Coverage", sublabel: "Residential & commercial customers" },
-    { value: "5+", label: "Trusted Brands", sublabel: "Cartel · SRNE · Deye · Felicity · 5Star" },
+    { value: "5+", label: "Trusted Brands", sublabel: "Kartel · SRNE · Deye · Felicity · FiveStar" },
   ],
   floatingCard: {
     title: "Why Customers Choose SunLife",
@@ -220,12 +220,32 @@ export const brandsSection = {
   heading: "We Install Products We Trust",
   intro: "We only work with manufacturers known for reliability and long term performance.",
   brands: [
-    { name: "Cartel", note: "Preferred" },
-    { name: "SRNE", note: "Preferred" },
-    { name: "Deye", note: "" },
-    { name: "Felicity", note: "" },
-    { name: "5Star", note: "" },
-  ],
+  {
+    name: "Kartel",
+    logo: "/images/brands/kartel.png",
+    note: "Preferred",
+  },
+  {
+    name: "SRNE",
+    logo: "/images/brands/srne.png",
+    note: "Preferred",
+  },
+  {
+    name: "Deye",
+    logo: "/images/brands/deye.png",
+    note: "",
+  },
+  {
+    name: "Felicity",
+    logo: "/images/brands/felicity.png",
+    note: "",
+  },
+  {
+    name: "FiveStar",
+    logo: "/images/brands/fivestar.png",
+    note: "",
+  },
+],
   supporting: "Every recommendation is based on your needs, budget, and long term value.",
   ctaNote: "Need help choosing the right equipment?",
   ctaSubtext: "Our team will recommend the best solution based on your needs.",

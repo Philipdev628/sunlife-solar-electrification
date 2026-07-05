@@ -12,7 +12,7 @@ export function ProblemSolutionSection() {
   const { sectionLabel, heading, intro, challenges, solution, imageAlt } = problemSolution;
 
   return (
-    <section className="bg-white pb-section-y-sm pt-32 sm:pt-36 md:pb-section-y lg:pt-40" aria-labelledby="problem-heading">
+    <section className="bg-white pb-section-y-sm pt-44 sm:pt-48 md:pb-section-y lg:pt-52" aria-labelledby="problem-heading">
       <Container>
         <div className="grid items-start gap-14 lg:grid-cols-[45fr_55fr]">
           {/* ── Left: Image ── */}

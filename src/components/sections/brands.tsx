@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/common/container";
 import { SectionHeading } from "@/components/common/section-heading";
@@ -20,13 +21,27 @@ export function BrandsSection() {
           className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
           staggerDelay={0.07}
         >
-          {brands.map(({ name, note }) => (
+          {brands.map(({ name, logo, note }) => (
             <StaggerItem key={name}>
-              <div className="group flex flex-col items-center justify-center rounded-xl border border-border bg-white px-4 py-6 shadow-card transition-all duration-default hover:border-brand-blue/30 hover:shadow-card-hover">
+              <div
+                className={`group flex h-40 flex-col items-center justify-center rounded-xl border border-border px-4 text-center shadow-card transition-all duration-default hover:border-brand-blue/30 hover:shadow-card-hover ${
+                  name === "Kartel"
+                    ? "bg-[#143B66]"
+                    : "bg-white"
+      }`}
+>
+                {/* Brand logo — replace with <Image> once official logos are supplied */}
+                {logo && (
+                  <Image
+                    src={logo}
+                    alt={`${name} logo`}
+                    width={120}
+                    height={60}
+                    className="mb-3 object-contain"
+                  />
+                )}
                 {/* Brand name wordmark — replace with <Image> once official logos are supplied */}
-                <span className="font-heading text-xl font-bold text-brand-charcoal/40 transition-colors duration-fast group-hover:text-brand-blue">
-                  {name}
-                </span>
+
                 {note && (
                   <span className="mt-1 rounded-badge bg-brand-gold/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-brand-gold-dark">
                     {note}

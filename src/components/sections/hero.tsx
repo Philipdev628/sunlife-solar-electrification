@@ -10,7 +10,7 @@ import { stockImages } from "@/content/stock-images";
 export function HeroSection() {
   return (
     <section
-      className="relative isolate flex min-h-[620px] items-center overflow-hidden bg-brand-navy pb-32 pt-40 sm:min-h-[680px] sm:pb-36 sm:pt-44 lg:min-h-[760px] lg:pt-48"
+      className="relative isolate flex min-h-[620px] items-center overflow-hidden bg-brand-navy pb-40 pt-40 sm:min-h-[680px] sm:pb-44 sm:pt-44 lg:min-h-[760px] lg:pb-48 lg:pt-48"
       aria-labelledby="hero-heading"
     >
       {/* ── Full-bleed background photo — a real moment (technician at work
@@ -123,9 +123,9 @@ export function HeroSection() {
 
       {/* ── Stats bar — anchored to the hero's bottom edge, straddling into
           the next section for that premium "floating metrics" feel. ── */}
-      <div className="absolute inset-x-0 bottom-0 z-10 translate-y-[58%] px-4">
+      <div className="absolute inset-x-0 bottom-0 z-20 translate-y-[20%] px-4">
         <Container className="!px-0">
-          <StaggerGroup className="mx-auto grid max-w-4xl grid-cols-1 divide-y divide-border rounded-2xl border border-white/60 bg-white shadow-[0_30px_70px_rgba(15,23,42,0.18)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          <StaggerGroup className="mx-auto grid max-w-5xl grid-cols-1 divide-y divide-border rounded-2xl border border-white/60 bg-white shadow-[0_30px_70px_rgba(15,23,42,0.18)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {hero.stats.map((stat, i) => (
               <StaggerItem key={stat.value}>
                 <div className="px-6 py-5 text-center sm:py-6">
