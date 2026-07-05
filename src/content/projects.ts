@@ -106,7 +106,7 @@ export const projects: Project[] = [
     completionYear: 2025,
     title: "CCTV Security Installation",
     description:
-      "Full-property CCTV system installed with remote mobile viewing for round-the-clock monitoring and peace of mind.",
+      "Full property CCTV system installed with remote mobile viewing for round the clock monitoring and peace of mind.",
     tags: ["CCTV", "Security", "Commercial"],
     location: "Lagos, Lagos State",
     equipment: ["HD CCTV Cameras", "NVR System"],

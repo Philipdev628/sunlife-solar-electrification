@@ -8,7 +8,7 @@ import { services } from "@/content/services";
 import { servicesSection } from "@/content/homepage";
 
 export function ServicesSection() {
-  const { sectionLabel, heading, intro, primaryCta, secondaryCta } = servicesSection;
+  const { sectionLabel, heading, intro, ctaHeading, ctaBody, primaryCta, secondaryCta } = servicesSection;
 
   return (
     <section className="bg-white section-padding" aria-labelledby="services-heading">
@@ -61,12 +61,15 @@ export function ServicesSection() {
           })}
         </StaggerGroup>
 
-        <Reveal className="mt-14 text-center">
-          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button asChild size="lg">
+        <Reveal className="relative mt-14 overflow-hidden rounded-2xl bg-brand-blue p-8 text-center sm:p-10">
+          <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-white/5" aria-hidden="true" />
+          <h3 className="text-h4 font-heading font-bold text-white">{ctaHeading}</h3>
+          <p className="mx-auto mt-2 max-w-xl text-body text-white/85">{ctaBody}</p>
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button asChild size="lg" variant="solidWhite">
               <Link href={primaryCta.href}>{primaryCta.label}</Link>
             </Button>
-            <Button asChild variant="secondary" size="lg">
+            <Button asChild size="lg" variant="outlineWhite">
               <Link href={secondaryCta.href}>{secondaryCta.label}</Link>
             </Button>
           </div>

@@ -50,7 +50,7 @@ export const faqs: FAQ[] = [
     id: "f6",
     question: "Can you upgrade my existing solar system?",
     answer:
-      "Absolutely. We can assess your current system and recommend upgrades such as additional panels, larger batteries, or a higher-capacity inverter.",
+      "Absolutely. We can assess your current system and recommend upgrades such as additional panels, larger batteries, or a higher capacity inverter.",
     showOnHomepage: true,
   },
   // Additional FAQs rendered on the /faq page (Phase 4)
@@ -58,7 +58,7 @@ export const faqs: FAQ[] = [
     id: "f7",
     question: "What brands of solar equipment do you install?",
     answer:
-      "We install trusted products from Cartel, SRNE, Deye, Felicity, and 5Star. We select the most suitable brand based on your energy requirements, budget, and long-term expectations.",
+      "We install trusted products from Cartel, SRNE, Deye, Felicity, and 5Star. We select the most suitable brand based on your energy requirements, budget, and long term expectations.",
   },
   {
     id: "f8",
@@ -140,7 +140,7 @@ export const faqs: FAQ[] = [
   },
   {
     id: "f21",
-    question: "Do you provide after-sales support?",
+    question: "Do you provide after sales support?",
     answer:
       "Yes. Our relationship doesn't end at installation — we're available for maintenance, troubleshooting, and support long after your system is up and running.",
   },

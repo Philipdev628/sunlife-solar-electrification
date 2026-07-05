@@ -115,13 +115,23 @@ the codebase.
 
 ## Contact Form — How It Works
 
-The form on `/contact` uses **Netlify Forms** (no backend needed):
+The form on `/contact` uses **Netlify Forms** (no backend needed) — with one important detail
+specific to Next.js App Router deployed via `@netlify/plugin-nextjs`:
 
-- The `<form>` carries `data-netlify="true"`, `name="contact"`, and a hidden `form-name` input —
-  this is what Netlify's build bot scans for to register the form.
+- Every route in this app, including `/contact`, is served through the Netlify Next Runtime's
+  function/edge function rather than as a plain static file. Netlify's form-submission capture
+  only works on requests that reach its CDN edge *before* a function claims them — so a POST sent
+  to `/contact` (or `/`) gets swallowed by the Next.js runtime and never reaches Netlify Forms,
+  even though it returns 200 with no errors.
+- The fix: `public/forms/contact.html` is a genuine static HTML file, outside Next.js's routing.
+  It contains a duplicate of the form's fields purely so Netlify's build-time crawler can detect
+  it, and — more importantly — it's the actual `fetch()` target in
+  `src/components/forms/contact-form.tsx`. Posting there hits Netlify's CDN directly, so the
+  submission is captured correctly.
+- `netlify.toml` includes an explicit passthrough redirect for `/forms/*` as a defensive
+  guarantee that path is always served as a static asset.
 - A hidden honeypot field (`netlify-honeypot="company"`) filters spam bots server-side.
-- On submit, the form POSTs to `/` as `application/x-www-form-urlencoded` and redirects to
-  `/thank-you` on success.
+- On submit, the form redirects to `/thank-you` on success.
 - Submissions appear in **Netlify → your site → Forms** and can be forwarded to email/Slack from
   there (see deployment steps below).
 

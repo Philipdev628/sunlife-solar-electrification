@@ -46,7 +46,7 @@ export const services: Service[] = [
       "Harness the power of the sun with professionally installed solar panels designed to maximize energy production and provide reliable electricity for your home or business.",
     detail: {
       overview: [
-        "Solar panels are the foundation of every reliable solar energy system. At SunLife Solar Electrification, we design and install high-efficiency solar panel systems that convert sunlight into dependable electricity, helping homes and businesses reduce their reliance on the national grid while lowering long-term energy costs.",
+        "Solar panels are the foundation of every reliable solar energy system. At SunLife Solar Electrification, we design and install high efficiency solar panel systems that convert sunlight into dependable electricity, helping homes and businesses reduce their reliance on the national grid while lowering long term energy costs.",
         "Every installation is carefully planned to maximize energy production, ensure durability, and complement the property's structure without compromising aesthetics.",
       ],
       lists: [
@@ -105,16 +105,16 @@ export const services: Service[] = [
     title: "Inverter & Charge Controller Systems",
     icon: BatteryCharging,
     shortDescription:
-      "For customers who prefer a conventional inverter setup, we install high-quality inverter and charge controller systems that deliver dependable backup power while offering a cost-effective alternative to hybrid systems.",
+      "For customers who prefer a conventional inverter setup, we install high quality inverter and charge controller systems that deliver dependable backup power while offering a cost effective alternative to hybrid systems.",
     detail: {
       overview: [
-        "Not every customer requires a hybrid inverter system. For customers looking for a practical and cost-effective alternative, we install conventional inverter systems paired with quality charge controllers for dependable backup power.",
+        "Not every customer requires a hybrid inverter system. For customers looking for a practical and cost effective alternative, we install conventional inverter systems paired with quality charge controllers for dependable backup power.",
         "Every system is configured for safe operation and optimal charging performance.",
       ],
       lists: [
         {
           label: "Best For",
-          items: ["Small homes", "Apartments", "Budget-conscious customers", "Backup power applications"],
+          items: ["Small homes", "Apartments", "Budget conscious customers", "Backup power applications"],
         },
         {
           label: "What's Included",
@@ -138,7 +138,7 @@ export const services: Service[] = [
       lists: [
         {
           label: "Benefits",
-          items: ["Longer lifespan", "Faster charging", "Maintenance-free operation", "Higher efficiency", "Improved backup duration"],
+          items: ["Longer lifespan", "Faster charging", "Maintenance free operation", "Higher efficiency", "Improved backup duration"],
         },
         {
           label: "Brands",

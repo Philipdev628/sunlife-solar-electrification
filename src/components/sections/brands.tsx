@@ -9,7 +9,7 @@ export function BrandsSection() {
   const { sectionLabel, heading, intro, brands, supporting, ctaNote, ctaSubtext, cta } = brandsSection;
 
   return (
-    <section className="bg-surface-light section-padding" aria-labelledby="brands-heading">
+    <section className="bg-surface-gold-tint section-padding" aria-labelledby="brands-heading">
       <Container>
         <Reveal>
           <SectionHeading label={sectionLabel} heading={heading} headingId="brands-heading" intro={intro} />

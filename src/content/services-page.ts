@@ -14,8 +14,8 @@ export const servicesHero = {
   pageLabel: "Our Services",
   heading: "Complete Solar & Electrical Solutions Designed Around Your Energy Needs",
   body: [
-    "Whether you're looking to install a brand-new solar system, upgrade an existing setup, improve your property's electrical infrastructure, or enhance security with CCTV, SunLife Solar Electrification delivers reliable, professional solutions tailored to your requirements.",
-    "From consultation and site inspection to installation, maintenance, and long-term support, our experienced team is committed to helping homes, businesses, schools, churches, and commercial facilities enjoy dependable, efficient, and sustainable power.",
+    "Whether you're looking to install a brand new solar system, upgrade an existing setup, improve your property's electrical infrastructure, or enhance security with CCTV, SunLife Solar Electrification delivers reliable, professional solutions tailored to your requirements.",
+    "From consultation and site inspection to installation, maintenance, and long term support, our experienced team is committed to helping homes, businesses, schools, churches, and commercial facilities enjoy dependable, efficient, and sustainable power.",
   ],
   primaryCta: { label: "Get a Free Quote", href: "/contact?intent=quote" },
   secondaryCta: { label: "Book a Site Inspection", href: "/contact?intent=inspection" },
@@ -43,7 +43,7 @@ export const whyChooseForProject = {
     { icon: Sparkles, label: "Clean installations" },
     { icon: WrenchIcon, label: "Premium equipment" },
     { icon: MessageSquareHeart, label: "Honest advice" },
-    { icon: HeadphonesIcon, label: "Reliable after-sales support" },
+    { icon: HeadphonesIcon, label: "Reliable after sales support" },
     { icon: MapPin, label: "Nationwide service" },
     { icon: Users, label: "Experienced team" },
   ],
@@ -55,7 +55,7 @@ export const servicesFinalCta = {
   heading: "Ready to Switch to Reliable Solar Energy?",
   body: [
     "Whether you're planning your first solar installation, upgrading your existing system, or simply looking for expert advice, SunLife Solar Electrification is here to help.",
-    "Let's design a solution that delivers dependable power, long-term savings, and peace of mind.",
+    "Let's design a solution that delivers dependable power, long term savings, and peace of mind.",
   ],
   primaryCta: { label: "Book a Site Inspection", href: "/contact?intent=inspection" },
   secondaryCta: { label: "Get a Free Quote", href: "/contact?intent=quote" },

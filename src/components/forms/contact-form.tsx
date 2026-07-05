@@ -60,13 +60,11 @@ export function ContactForm() {
   const serviceNeededValue = watch("serviceNeeded");
 
   async function onSubmit(values: ContactFormValues) {
-  console.log("Submitting form...", values);  
     setSubmitError(null);
     try {
-      const response = await fetch("/contact", {
+      const response = await fetch("/forms/contact.html", {
         method: "POST",
-        headers: { 
-          "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encodeFormData({
           "form-name": "contact",
           fullName: values.fullName,
@@ -79,8 +77,6 @@ export function ContactForm() {
           company: values.company ?? "",
         }),
       });
-      console.log("Response status:", response.status);
-      console.log("Response OK:", response.ok);
 
       if (!response.ok) throw new Error("Submission failed");
       router.push("/thank-you");
@@ -97,9 +93,15 @@ export function ContactForm() {
       method="POST"
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-5"
-      // Netlify Forms detection — the static HTML build must contain a
-      // matching plain <form> with these attributes for the bot submissions
-      // to be captured. See README "Contact Form" section.
+      // These attributes let Netlify's build-time crawler detect this form
+      // as a backup/redundant registration. The submission itself is sent by
+      // onSubmit to /forms/contact.html — a real static file outside
+      // Next.js's routing — which is what actually makes Netlify Forms
+      // receive the data. Posting here (a Next.js App Router page) would
+      // silently succeed (200, no errors) without ever reaching Netlify
+      // Forms, because the Next Runtime's function claims this route before
+      // Netlify's own forms pipeline gets a chance to see the POST. Full
+      // explanation in public/forms/contact.html.
       data-netlify="true"
       netlify-honeypot="company"
     >

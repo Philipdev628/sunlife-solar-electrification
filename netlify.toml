@@ -8,6 +8,18 @@
 [build.environment]
   NEXT_TELEMETRY_DISABLED = "1"
 
+# Netlify Forms fix — guarantees /forms/contact.html (the real submission
+# target for the contact form) is always served as a static asset directly
+# from the CDN, never proxied through the Next.js Runtime function. Without
+# this, Netlify Forms detects the form at build time but silently drops every
+# submission, because the Next Runtime's catch-all would otherwise claim the
+# POST before Netlify's own forms pipeline can process it.
+[[redirects]]
+  from = "/forms/*"
+  to = "/forms/:splat"
+  status = 200
+  force = false
+
 # Security headers applied site-wide
 [[headers]]
   for = "/*"

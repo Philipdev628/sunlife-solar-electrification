@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/common/container";
@@ -7,7 +8,19 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/common/motion";
 import { whyChooseUs } from "@/content/homepage";
 
 export function WhyChooseUsSection() {
-  const { sectionLabel, heading, intro, features, supportingHeading, supportingBody, ctaHeading, ctaSubtext, primaryCta, secondaryCta } = whyChooseUs;
+  const {
+    sectionLabel,
+    heading,
+    intro,
+    features,
+    supportingHeading,
+    supportingBody,
+    learnMoreCta,
+    ctaHeading,
+    ctaSubtext,
+    primaryCta,
+    secondaryCta,
+  } = whyChooseUs;
 
   return (
     <section className="relative overflow-hidden bg-surface-light section-padding" aria-labelledby="why-heading">
@@ -49,6 +62,13 @@ export function WhyChooseUsSection() {
               <p key={i}>{para}</p>
             ))}
           </div>
+          <Link
+            href={learnMoreCta.href}
+            className="mt-3 inline-flex items-center gap-1 text-small font-semibold text-brand-blue hover:text-brand-blue-dark"
+          >
+            {learnMoreCta.label}
+            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+          </Link>
           <h4 className="mt-8 text-h4 font-heading font-semibold text-brand-navy">{ctaHeading}</h4>
           <p className="mt-2 text-body text-brand-charcoal/70">{ctaSubtext}</p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">

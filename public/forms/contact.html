@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>SunLife Solar Electrification — Form Handler</title>
+<meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+<!--
+  WHY THIS FILE EXISTS (root cause + fix for the silent form-submission bug)
+  ============================================================================
+  This site is deployed via @netlify/plugin-nextjs, which routes every
+  Next.js App Router path — including /contact — through a Netlify
+  Function/Edge Function so the Next.js server runtime can handle it.
+
+  Netlify's built-in Forms feature only captures a POST if it is intercepted
+  at Netlify's edge BEFORE it reaches a Function. Because /contact (and every
+  other app route) is claimed by the Next Runtime's function, the POST from
+  the contact form was reaching the Next.js server instead of Netlify's forms
+  pipeline. Next.js had nothing to do with that POST (App Router pages don't
+  define a POST handler), so it fell through and still returned 200 — which
+  is why the form "worked" from the browser's point of view (no errors, 200
+  response, redirect to /thank-you) while Netlify Forms recorded nothing.
+
+  The fix: this file is a genuine static asset, physically present in the
+  publish directory at build time, at a path Next.js's router does not own.
+  Netlify serves real static files directly from its CDN without invoking a
+  Function, so a POST sent here reaches Netlify's own forms-processing layer
+  instead of the Next.js runtime — and Netlify's build-time crawler can also
+  parse this plain HTML file directly, which is the most reliable way for it
+  to detect the "contact" form's fields (more reliable than depending on
+  Next.js's SSR output containing an identical snapshot at build time).
+
+  The real form fields below exactly match src/components/forms/contact-form.tsx.
+  The actual React form (what visitors fill in) still renders on /contact;
+  its fetch() call POSTs to /forms/contact.html — this page is never visited
+  by a person, only ever used as: (1) something for Netlify's crawler to
+  parse at build time, and (2) the request target for the JS submission.
+-->
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="company">
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="text" name="fullName" />
+  <input type="tel" name="phone" />
+  <input type="email" name="email" />
+  <input type="text" name="location" />
+  <input type="text" name="serviceNeeded" />
+  <textarea name="message"></textarea>
+  <input type="text" name="consent" />
+  <input type="text" name="company" />
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>

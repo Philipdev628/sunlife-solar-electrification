@@ -53,7 +53,7 @@ export const projectStats: {
 export const workmanshipPromise = {
   heading: "Every Installation Reflects Our Standards",
   body: [
-    "We believe every installation should deliver more than reliable electricity — it should demonstrate professionalism, attention to detail, and long-term reliability.",
+    "We believe every installation should deliver more than reliable electricity — it should demonstrate professionalism, attention to detail, and long term reliability.",
     "Our team takes pride in neat cable management, quality equipment, proper testing, and ensuring every customer understands how their new system works before we leave.",
     "When you choose SunLife Solar Electrification, you're investing in workmanship designed to stand the test of time.",
   ],

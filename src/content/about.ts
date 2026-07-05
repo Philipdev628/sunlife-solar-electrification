@@ -23,7 +23,7 @@ export const aboutHero = {
   heading: "Powering Homes, Businesses, and Brighter Futures Since 2020",
   body: [
     "Since 2020, SunLife Solar Electrification has been helping homes, businesses, schools, churches, and commercial facilities enjoy reliable, efficient, and sustainable energy solutions.",
-    "We believe that every customer deserves dependable electricity, honest advice, and professional workmanship. That's why every installation we complete is designed with quality, reliability, and long-term performance in mind.",
+    "We believe that every customer deserves dependable electricity, honest advice, and professional workmanship. That's why every installation we complete is designed with quality, reliability, and long term performance in mind.",
     "Whether you're installing your first solar system or upgrading an existing one, our team is committed to delivering solutions that provide lasting value and peace of mind.",
   ],
   cta: { label: "Book a Site Inspection", href: "/contact?intent=inspection" },
@@ -36,7 +36,7 @@ export const ourStory = {
   body: [
     "SunLife Solar Electrification was founded with a simple vision: to make reliable electricity more accessible to homes and businesses across Nigeria.",
     "What began in 2020 as a passion for delivering dependable energy solutions has grown into a company trusted for professional installations, honest recommendations, and exceptional customer service.",
-    "Over the years, we've worked with homeowners, businesses, schools, churches, and commercial clients to design solar systems that reduce dependence on unreliable electricity while providing long-term value.",
+    "Over the years, we've worked with homeowners, businesses, schools, churches, and commercial clients to design solar systems that reduce dependence on unreliable electricity while providing long term value.",
     "Every project we complete reflects our belief that quality workmanship, trusted products, and customer satisfaction should always come first.",
     "As technology continues to evolve, so do we. We remain committed to learning, improving, and delivering solutions that help our customers enjoy cleaner, smarter, and more reliable energy.",
   ],
@@ -46,7 +46,7 @@ export const ourStory = {
 // ─── 7.3 Mission, Vision & Core Values ──────────────────────────────────────
 export const missionVision = {
   mission:
-    "To provide reliable, efficient, and affordable solar and electrical solutions that empower homes and businesses with dependable energy while delivering outstanding customer service and long-term value.",
+    "To provide reliable, efficient, and affordable solar and electrical solutions that empower homes and businesses with dependable energy while delivering outstanding customer service and long term value.",
   vision:
     "To become one of Nigeria's most trusted solar and electrical solution providers, recognized for quality workmanship, innovation, integrity, and customer satisfaction.",
 };
@@ -83,7 +83,7 @@ export const coreValues = [
 export const whyCustomersTrust = {
   heading: "Built on Quality, Honesty, and Reliable Service",
   intro:
-    "Trust is earned through consistent results, professional service, and a commitment to doing what's right for every customer. At SunLife Solar Electrification, we focus on building long-term relationships by providing solutions that genuinely meet our customers' needs.",
+    "Trust is earned through consistent results, professional service, and a commitment to doing what's right for every customer. At SunLife Solar Electrification, we focus on building long term relationships by providing solutions that genuinely meet our customers' needs.",
   points: [
     {
       icon: MessageSquareHeart,
@@ -146,7 +146,7 @@ export const ourPromise = {
     "Deliver clean, professional installations.",
     "Use trusted products from reputable manufacturers.",
     "Provide honest advice every step of the way.",
-    "Stand by our work with dependable after-sales support.",
+    "Stand by our work with dependable after sales support.",
   ],
   closing:
     "Our goal is simple: to build lasting relationships by delivering energy solutions our customers can trust.",
