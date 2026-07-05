@@ -31,7 +31,7 @@ import {
 export const hero = {
   eyebrow: "Reliable Solar & Electrical Solutions Across Nigeria",
   headline: "Reliable Solar Energy for Homes & Businesses",
-  body: "From panels to inverters, batteries, and wiring — we design, install, and support power systems built to last.",
+  body: "From panels to inverters, batteries, and wiring, we design, install, and support power systems built to last.",
   primaryCta: { label: "Get a Free Quote", href: "/contact?intent=quote" },
   secondaryCta: { label: "Book a Site Inspection", href: "/contact?intent=inspection" },
   trustBadges: [
@@ -68,7 +68,7 @@ export const problemSolution = {
     {
       icon: Fuel,
       title: "Rising Fuel Costs",
-      description: "Generators cost more to run every year — and make less sense over time.",
+      description: "Generators cost more to run every year, and make less sense over time.",
     },
     {
       icon: CircleDollarSign,
@@ -83,7 +83,7 @@ export const problemSolution = {
   ],
   solution: {
     heading: "Smart Solar Solutions Designed for You",
-    body: "We assess your energy needs first, then design the right combination of panels, inverters, and batteries — installed, tested, and supported by our team.",
+    body: "We assess your energy needs first, then design the right combination of panels, inverters, and batteries, installed, tested, and supported by our team.",
     cta: { label: "Book a Site Inspection", href: "/contact?intent=inspection" },
     ctaSubtext: "Not sure what you need? Talk to our team for honest advice.",
   },
@@ -93,9 +93,9 @@ export const problemSolution = {
 // ─── Why Choose SunLife (Section 6.4) ────────────────────────────────────────
 export const whyChooseUs = {
   sectionLabel: "Why Choose SunLife",
-  heading: "More Than Installers — Your Energy Partner",
+  heading: "More Than Installers, Your Energy Partner",
   intro:
-    "We recommend the right system for your needs, not the biggest one — with honest guidance from consultation through installation.",
+    "We recommend the right system for your needs, not the biggest one, with honest guidance from consultation through installation.",
   features: [
     {
       icon: Lightbulb,
@@ -120,7 +120,7 @@ export const whyChooseUs = {
     {
       icon: HeadphonesIcon,
       title: "Reliable After Sales Support",
-      description: "Maintenance, troubleshooting, and upgrades — long after installation.",
+      description: "Maintenance, troubleshooting, and upgrades, long after installation.",
     },
     {
       icon: MapPin,
@@ -145,7 +145,7 @@ export const servicesSection = {
   intro:
     "From new installations to upgrades and electrical work, we deliver reliable solutions tailored to your property.",
   supportingHeading: "Not Sure Which Service You Need?",
-  supportingBody: "Tell us your energy needs — we'll recommend the right solution, no pressure.",
+  supportingBody: "Tell us your energy needs, we'll recommend the right solution, no pressure.",
   ctaHeading: "Let's Find the Right Solution for You",
   ctaBody: "Ready to switch to reliable energy? We're here to help.",
   primaryCta: { label: "Get a Free Quote", href: "/contact?intent=quote" },

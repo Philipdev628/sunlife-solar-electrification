@@ -7,6 +7,6 @@ export const faqHero = {
 
 export const faqCta = {
   heading: "Still Have Questions?",
-  body: "Contact our team today — we're happy to help.",
+  body: "Contact our team today, we're happy to help.",
   cta: { label: "Contact Our Team", href: "/contact" },
 };

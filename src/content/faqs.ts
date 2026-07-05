@@ -112,7 +112,7 @@ export const faqs: FAQ[] = [
     id: "f16",
     question: "Can you inspect my current solar system?",
     answer:
-      "Yes. We offer inspection services for existing systems — whether we installed them or not — to diagnose faults, check performance, and recommend improvements.",
+      "Yes. We offer inspection services for existing systems, whether we installed them or not, to diagnose faults, check performance, and recommend improvements.",
   },
   {
     id: "f17",
@@ -142,13 +142,13 @@ export const faqs: FAQ[] = [
     id: "f21",
     question: "Do you provide after sales support?",
     answer:
-      "Yes. Our relationship doesn't end at installation — we're available for maintenance, troubleshooting, and support long after your system is up and running.",
+      "Yes. Our relationship doesn't end at installation, we're available for maintenance, troubleshooting, and support long after your system is up and running.",
   },
   {
     id: "f22",
     question: "Can solar completely replace PHCN electricity?",
     answer:
-      "For many homes and businesses, yes — with a properly sized system covering your full energy load. We assess your consumption during consultation to determine if full independence is realistic for your property.",
+      "For many homes and businesses, yes, with a properly sized system covering your full energy load. We assess your consumption during consultation to determine if full independence is realistic for your property.",
   },
   {
     id: "f23",
@@ -172,7 +172,7 @@ export const faqs: FAQ[] = [
     id: "f26",
     question: "Is a site inspection necessary before installation?",
     answer:
-      "Yes. A site inspection allows us to assess your property, calculate your energy usage accurately, and recommend the right system — this helps avoid costly sizing mistakes.",
+      "Yes. A site inspection allows us to assess your property, calculate your energy usage accurately, and recommend the right system, this helps avoid costly sizing mistakes.",
   },
   {
     id: "f27",

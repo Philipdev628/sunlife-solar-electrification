@@ -15,7 +15,7 @@ export const serviceOptions = [
   "CCTV Installation",
   "Electrical Wiring & Installations",
   "Custom Solar Solutions",
-  "Not sure — I need advice",
+  "Not sure, I need advice",
 ] as const;
 
 export const whyContactSunLife = {

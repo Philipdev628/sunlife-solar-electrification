@@ -88,7 +88,7 @@ export const whyCustomersTrust = {
     {
       icon: MessageSquareHeart,
       title: "Honest Recommendations",
-      description: "We recommend systems based on your actual energy requirements — not the most expensive option.",
+      description: "We recommend systems based on your actual energy requirements, not the most expensive option.",
     },
     {
       icon: BadgeCheck,
